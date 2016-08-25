@@ -50,7 +50,7 @@ class Storage(object):
         if not hasattr(content, 'chunks'):
             content = File(content, name)
 
-        name = self.get_available_name(name, max_length=max_length)
+        name = self.get_available_name(name)
         return self._save(name, content)
 
     # These methods are part of the public API, with default implementations.
